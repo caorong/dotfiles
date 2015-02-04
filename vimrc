@@ -73,7 +73,7 @@ Bundle 'scrooloose/syntastic'
 "------- web frontend ----------
 "Bundle 'othree/html5.vim'
 " Bundle 'tpope/vim-haml'
-"Bundle 'pangloss/vim-javascript'
+Bundle 'pangloss/vim-javascript'
 "Bundle 'kchmck/vim-coffee-script'
 "Bundle 'nono/jquery.vim'
 " Bundle 'groenewege/vim-less'
@@ -194,7 +194,7 @@ autocmd FileType c,cpp setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType c,cpp source ~/.vim/c-macros.vim
 
 " syntax support
-autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+"autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
 " js
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
@@ -252,8 +252,15 @@ nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_min_num_of_chars_for_completion = 1
 let g:ycm_confirm_extra_conf = 0
+" let g:ycm_filetype_whitelist = { 
+    " \'c' : 1,
+    " \'c++' : 1,
+    " \'python' : 1
+    " \}
+
 let g:ycm_filetype_blacklist = {
     \ 'ruby' : 1,
+    \ 'java' : 1,
     \ 'tagbar' : 1,
     \ 'qf' : 1,
     \ 'notes' : 1,
@@ -261,7 +268,7 @@ let g:ycm_filetype_blacklist = {
     \ 'unite' : 1,
     \ 'text' : 1,
     \ 'vimwiki' : 1,
-    \ 'gitcommit' : 1,
+    \ 'gitcommit' : 1
     \}
 
 " easyAlign

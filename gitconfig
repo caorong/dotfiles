@@ -1,0 +1,31 @@
+[push]
+	default = matching
+[core]
+	editor = vim
+	filemode = false
+[color]
+	ui = true
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = mymeld
+    conflictstyle = diff3
+[alias]
+	last = log -1 --stat
+	cp = cherry-pick
+	co = checkout
+	cl = clone
+	ci = commit
+	st = status 
+	br = branch
+	unstage = reset HEAD --
+	dc = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+[user]
+	name = caorong
+	email = lelouchcr@gmail.com
+[mergetool "mymeld"]
+	cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE $MERGED
+; [diff]
+    ; external = git-meld
+
